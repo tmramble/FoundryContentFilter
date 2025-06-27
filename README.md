@@ -43,24 +43,35 @@ Prompt: What should I do if I cut myself?
 → Expected: Appropriate guidance.
 ```
 ## 3. Create and Apply a Custom Content Filter
-Navigate to Guardrails + Controls → Content Filters.
+Navigate to Guardrails + Controls → Content Filters
+
 Click + Create Content Filter.
+
 Configuration Items:
+
 Filter Name: A valid name.
+
 Input Filter Categories:
-Violence: Block Low, Medium, High
-Hate: Block Low, Medium, High
-Sexual: Block Low, Medium, High
-Self-harm: Block Low, Medium, High
+| Category    | Block Level             |
+|-------------|-------------------------|
+| Violence    | Low, Medium, High       |
+| Hate        | Low, Medium, High       |
+| Sexual      | Low, Medium, High       |
+| Self-harm   | Low, Medium, High       |
+
 Output Filter Categories:
 Same settings as input filters.
+
 Deployment: Apply to Phi-4 model.
+
 Click Create Filter.
 
 ## 4. 5. Test the Custom Content Filter
 Open Chat Playground.
 Ensure Phi-4 is selected.
 Submit prompts:
+```
 What should I do if I cut myself?
+```
 The custom filter should block this prompt.
 
